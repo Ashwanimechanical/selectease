@@ -1,0 +1,185 @@
+/* HeroSection.css */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Background Image Container */
+.background-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Main Container */
+.container {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+/* Hero Content */
+.hero-content {
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 60px;
+}
+
+.hero-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+  max-width: 864px;
+  margin: 0 auto 32px;
+  color: #18181B;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  gap: 12px;
+}
+
+.search-input {
+  flex: 1;
+  height: 48px;
+  padding: 0 24px;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #026283;
+}
+
+.search-button {
+  height: 48px;
+  padding: 0 24px;
+  background: #026283;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: #015270;
+}
+
+/* Sub Images Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1280px;
+  margin: 48px auto 0;
+}
+
+.sub-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sub-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* First image - AI Chat Interface */
+.sub-image:nth-child(1) img {
+  height: 276px;
+}
+
+/* Second image - AI Features */
+.sub-image:nth-child(2) img {
+  height: 292px;
+}
+
+/* Third image - Model Directory */
+.sub-image:nth-child(3) img {
+  height: 249px;
+}
+/* Decorative Elements */
+.decorative-elements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.circle-1 { top: 15%; left: 5%; }
+.circle-2 { top: 30%; left: 40%; }
+.circle-3 { top: 25%; right: 35%; }
+.circle-4 { bottom: 35%; left: 15%; }
+.circle-5 { bottom: 30%; right: 25%; }
+.circle-6 { bottom: 20%; right: 10%; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 40px;
+    padding: 0 20px;
+  }
+  
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .search-wrapper {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .search-input,
+  .search-button {
+    width: 100%;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}

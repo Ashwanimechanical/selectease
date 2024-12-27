@@ -1,0 +1,136 @@
+/* src/component/Header/Header.css */
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 140px;  
+}
+
+.logo-image {
+  width: 112px;  
+  height: 50px;  
+  object-fit: contain;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;  
+  margin-left: 398px;  
+}
+
+.nav-link {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111111;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #026283;
+}
+
+/* Search and Contact */
+.search-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-input {
+  width: 350px;  
+  height: 52px;  
+  padding: 16px 20px;  
+  border: 1px solid #E5E7EB;
+  border-radius: 50px; 
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  margin-left: 897px;  
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #026283;
+}
+
+.contact-button {
+  width: 143px; 
+  height: 52px; 
+  background-color: #026283;
+  color: white;
+  border: none;
+  border-radius: 50px; 
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px 32px;  
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-left: 1157px;  
+}
+
+.contact-button:hover {
+  background-color: #015270;
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+  .header-container {
+    padding: 20px;
+  }
+  
+  .nav {
+    margin-left: 0;
+  }
+  
+  .search-input,
+  .contact-button {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    gap: 20px;
+  }
+  
+  .search-input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  
+  .search-contact {
+    display: none;
+  }
+}

@@ -1,0 +1,98 @@
+.comparison-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  
+  .comparison-title {
+    font-size: 40px;
+    font-weight: 400;
+    color: #383846;
+    margin-bottom: 32px;
+  }
+  
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 32px;
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+  }
+  
+  .comparison-pair {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: white;
+    border: 1px solid #F3F4F6;
+    border-radius: 8px;
+    height: 100px;
+  }
+  
+  .company-side {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 132px;
+  }
+  
+  .company-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .company-name {
+    font-size: 16px;
+    color: #383846;
+    font-weight: 500;
+  }
+  
+  .separator {
+    position: relative;
+    width: 20px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .vertical-line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #E5E7EB;
+  }
+  
+  .vs-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    z-index: 1;
+    padding: 4px;
+    border: 1px solid #E5E7EB;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .comparison-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .comparison-title {
+      font-size: 32px;
+      padding: 0 16px;
+    }
+  }
